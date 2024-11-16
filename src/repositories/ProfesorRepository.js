@@ -13,7 +13,7 @@ module.exports = {
 
     obtenerProfesorPorId: async (idprofesor) => {
         try {
-            const [result] = await pool.query('SELECT * FROM profesores WHERE idprofesor = ?', [idprofesor]);
+            const result = await pool.query('SELECT * FROM profesores WHERE idprofesor = ?', [idprofesor]);
             return result[0]; // Asegúrate de devolver el primer elemento del array
         } catch (error) {
             console.error('Ocurrió un problema al consultar el profesor: ', error);

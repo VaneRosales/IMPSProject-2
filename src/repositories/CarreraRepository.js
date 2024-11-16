@@ -12,7 +12,7 @@ module.exports = {
     },
     obtenerCarreraPorId: async (idcarrera) => {
     try {
-        const [result] = await pool.query('SELECT * FROM carreras WHERE idcarrera = ?', [idcarrera]);
+        const result = await pool.query('SELECT * FROM carreras WHERE idcarrera = ?', [idcarrera]);
         console.log('Resultado de la consulta:', result); // Verifica los datos aquí
         return result[0]; // Asegúrate de devolver el primer elemento del array
     } catch (error) {
@@ -43,7 +43,7 @@ module.exports = {
 
     actualizarCarrera: async (idcarrera, carrera) => {
         try {
-            const result = await pool.query('UPDATE carreras SET ? WHERE idcarrera = ?', [carrera, idcarrera]);
+            const result = await pool.query('UPDATE carreras SET carrera = ? WHERE idcarrera = ?', [carrera, idcarrera]);
             return result.affectedRows > 0;
         } catch (error) {
             console.error('Error al actualizar el carrera', error);

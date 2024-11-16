@@ -6,6 +6,9 @@
         <div class="col-md-4">
             <form method="POST" action="/carreras/editar/{{carrera.idcarrera}}">
                 <div class="form-group">
+                    <input type="text" class="form-control" id="idcarrera" name="idcarrera" value="{{carrera.idcarrera}}" readonly>
+                </div>
+                <div class="form-group">
                     <input type="text" class="form-control" name="carrera" value="{{carrera.carrera}}" placeholder="Nombre de la carrera" autofocus />
                 </div>
                 <div class="form-group">

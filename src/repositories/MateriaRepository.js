@@ -13,7 +13,7 @@ module.exports = {
 
     obtenerMateriaPorId: async (idmateria) => {
         try {
-            const [result] = await pool.query('SELECT * FROM materias WHERE idmateria = ?', [idmateria]);
+            const result = await pool.query('SELECT * FROM materias WHERE idmateria = ?', [idmateria]);
             return result[0]; // Asegúrate de devolver el primer elemento del array
         } catch (error) {
             console.error('Ocurrió un problema al consultar la materia: ', error);
