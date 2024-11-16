@@ -1,0 +1,33 @@
+<!-- En este archivo irá todo el código en común de nuestras vistas -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>IMPS</title>
+    {{!-- FRAMEWORK BOOTSTRAP 4 --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-
+Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {{!-- STYLES --}}
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{> navigation }}
+    {{> message }}
+    {{{ body }}} <!-- esta es sintaxis propia de handlebars, indica que solo el
+codigo en esta seccion sera dinamico -->
+    {{!-- SCRIPTS --}}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpXnVD8z0WfgccFbkkSmP5d3P+SDcTX0Oi9aDfOXIjFka0WrB2XhRW4z" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha384-q6E9RHvbIyZFJoft+2mJbHaEWldnvJoO9jERp2xSBXhP4IhLebnHEe0pUyMrH7Pw" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq5ec9dRbgHyyx59WH8LR17uijcQZOjgpTrA0U1pA29j1N9rgi" crossorigin="anonymous"></script>
+    {{!-- Este script nos permite manejar la asignacion de los grupos --}}
+    <script src="/js/asignarGrupo.js"></script>
+    <script src="/js/ajax.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/manejoAlertas.js"></script>
+</body>
+
+</html>
